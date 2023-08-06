@@ -30,11 +30,13 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: LoginScreenProtocol {
     func actionLogin() {
-        <#code#>
+        let viewController = HomeViewController()
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     func actionRegister() {
-        <#code#>
+        let viewController = RegisterViewController()
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     

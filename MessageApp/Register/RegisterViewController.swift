@@ -18,7 +18,19 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configBackground()
+        screen?.setDelegate(delegate: self)
     }
+    
+    private func configBackground() {
+        view.backgroundColor = .lightGray
+    }
+}
+
+extension RegisterViewController: RegisterScreenProtocol {
+    func actionRegisterButton() {
+        navigationController?.popViewController(animated: true)
+    }
+    
     
 }
