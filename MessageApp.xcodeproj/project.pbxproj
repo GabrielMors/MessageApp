@@ -54,6 +54,13 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		C4174D692A801A5B0013E829 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		C4212B142A6D3F12009F9693 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				C4212B3F2A6E0AC3009F9693 /* Model */,
+				C4174D692A801A5B0013E829 /* Alert */,
 				C41318E32A7FB6D300850769 /* Home */,
 				C4212B3A2A6E08CC009F9693 /* Register */,
 				C4212B352A6D4286009F9693 /* Login */,

@@ -32,7 +32,7 @@ class LoginScreen: UIView {
     lazy var emailLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "E-mail"
+        label.text = "Email"
         label.textColor = .black
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 16)
@@ -43,7 +43,7 @@ class LoginScreen: UIView {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.font = UIFont.systemFont(ofSize: 18)
-        textField.placeholder = "Type your e-mail"
+        textField.placeholder = "Digite seu email"
         textField.autocorrectionType = .no
         textField.spellCheckingType = .no
         textField.keyboardType = .default
@@ -54,7 +54,7 @@ class LoginScreen: UIView {
     lazy var passwordLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Password"
+        label.text = "Senha"
         label.textColor = .black
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 16)
@@ -65,7 +65,7 @@ class LoginScreen: UIView {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.font = UIFont.systemFont(ofSize: 18)
-        textField.placeholder = "Type your password"
+        textField.placeholder = "Digite sua senha"
         textField.autocorrectionType = .no
         textField.spellCheckingType = .no
         textField.keyboardType = .default

@@ -23,7 +23,6 @@ class RegisterScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Registre-se"
-        label.font = .systemFont(ofSize: 30)
         label.textColor = .black
         label.textAlignment = .center
         label.numberOfLines = 0
@@ -36,6 +35,7 @@ class RegisterScreen: UIView {
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.font = UIFont.systemFont(ofSize: 18)
         textField.placeholder = "Digite seu nome"
+        textField.backgroundColor = .white
         textField.autocorrectionType = .no
         textField.spellCheckingType = .no
         textField.keyboardType = .default
@@ -47,9 +47,10 @@ class RegisterScreen: UIView {
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.font = UIFont.systemFont(ofSize: 18)
         textField.placeholder = "Digite seu email"
+        textField.backgroundColor = .white
         textField.autocorrectionType = .no
         textField.spellCheckingType = .no
-        textField.keyboardType = .default
+        textField.keyboardType = .emailAddress
         return textField
     }()
     
@@ -58,6 +59,7 @@ class RegisterScreen: UIView {
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.font = UIFont.systemFont(ofSize: 18)
         textField.placeholder = "Digite sua senha"
+        textField.backgroundColor = .white
         textField.autocorrectionType = .no
         textField.spellCheckingType = .no
         textField.keyboardType = .default
@@ -69,6 +71,7 @@ class RegisterScreen: UIView {
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.font = UIFont.systemFont(ofSize: 18)
         textField.placeholder = "Confirme sua senha"
+        textField.backgroundColor = .white
         textField.autocorrectionType = .no
         textField.spellCheckingType = .no
         textField.keyboardType = .default
@@ -80,11 +83,10 @@ class RegisterScreen: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Registrar", for: .normal)
         button.setTitleColor(UIColor.white, for: .normal)
-        button.backgroundColor = UIColor.black
+        button.backgroundColor = UIColor.darkGray
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
         button.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
-        
         return button
     }()
     
@@ -92,19 +94,39 @@ class RegisterScreen: UIView {
         delegate?.actionRegisterButton()
     }
     
+    private func addLeftPadding(to textField: UITextField) {
+        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textField.frame.height))
+        textField.leftView = leftView
+        textField.leftViewMode = .always
+    }
+    
+    private func addBorder(to: UITextField) {
+        to.layer.borderWidth = 1.5
+        to.layer.borderColor = UIColor.darkGray.cgColor
+        to.layer.cornerRadius = 15
+    }
+    
     private func addElements() {
-        addSubview(registerLabel)
-        addSubview(nameTextField)
-        addSubview(emailTextField)
-        addSubview(passwordTextField)
-        addSubview(confirmPasswordTextField)
-        addSubview(registerButton)
+        self.addSubview(self.registerLabel)
+        self.addSubview(self.nameTextField)
+        self.addSubview(self.emailTextField)
+        self.addSubview(self.passwordTextField)
+        self.addSubview(self.confirmPasswordTextField)
+        self.addSubview(self.registerButton)
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         addElements()
         configConstraints()
+        addLeftPadding(to: nameTextField)
+        addLeftPadding(to: emailTextField)
+        addLeftPadding(to: passwordTextField)
+        addLeftPadding(to: confirmPasswordTextField)
+        addBorder(to: nameTextField)
+        addBorder(to: emailTextField)
+        addBorder(to: passwordTextField)
+        addBorder(to: confirmPasswordTextField)
     }
     
     required init?(coder: NSCoder) {
@@ -114,10 +136,32 @@ class RegisterScreen: UIView {
     private func configConstraints() {
         NSLayoutConstraint.activate([
             registerLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),
-            registerLabel.leadingAnchor.constraint(equalTo: leftAnchor, constant: 40),
-            registerLabel.trailingAnchor.constraint(equalTo: leftAnchor, constant: -40),
+            registerLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             
+            nameTextField.topAnchor.constraint(equalTo: registerLabel.bottomAnchor, constant: 20),
+            nameTextField.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            nameTextField.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            nameTextField.heightAnchor.constraint(equalToConstant: 40),
             
+            emailTextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: 20),
+            emailTextField.leadingAnchor.constraint(equalTo: nameTextField.leadingAnchor),
+            emailTextField.trailingAnchor.constraint(equalTo: nameTextField.trailingAnchor),
+            emailTextField.heightAnchor.constraint(equalTo: nameTextField.heightAnchor),
+            
+            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 20),
+            passwordTextField.leadingAnchor.constraint(equalTo: nameTextField.leadingAnchor),
+            passwordTextField.trailingAnchor.constraint(equalTo: nameTextField.trailingAnchor),
+            passwordTextField.heightAnchor.constraint(equalTo: nameTextField.heightAnchor),
+            
+            confirmPasswordTextField.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
+            confirmPasswordTextField.leadingAnchor.constraint(equalTo: nameTextField.leadingAnchor),
+            confirmPasswordTextField.trailingAnchor.constraint(equalTo: nameTextField.trailingAnchor),
+            confirmPasswordTextField.heightAnchor.constraint(equalTo: nameTextField.heightAnchor),
+            
+            registerButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            registerButton.topAnchor.constraint(equalTo: confirmPasswordTextField.bottomAnchor, constant: 40),
+            registerButton.heightAnchor.constraint(equalToConstant: 40),
+            registerButton.widthAnchor.constraint(equalToConstant: 100)
         ])
     }
 }
