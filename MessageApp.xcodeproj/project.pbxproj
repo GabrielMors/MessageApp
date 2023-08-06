@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C41318E52A7FB6F000850769 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41318E42A7FB6F000850769 /* HomeViewController.swift */; };
 		C41318E72A7FB70200850769 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41318E62A7FB70200850769 /* HomeScreen.swift */; };
+		C4174D6B2A801AB40013E829 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4174D6A2A801AB40013E829 /* Alert.swift */; };
 		C4212B212A6D3F12009F9693 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4212B202A6D3F12009F9693 /* AppDelegate.swift */; };
 		C4212B232A6D3F12009F9693 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4212B222A6D3F12009F9693 /* SceneDelegate.swift */; };
 		C4212B252A6D3F12009F9693 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4212B242A6D3F12009F9693 /* LoginViewController.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		C41318E42A7FB6F000850769 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C41318E62A7FB70200850769 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		C4174D6A2A801AB40013E829 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		C4212B1D2A6D3F12009F9693 /* MessageApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4212B202A6D3F12009F9693 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4212B222A6D3F12009F9693 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 		C4174D692A801A5B0013E829 /* Alert */ = {
 			isa = PBXGroup;
 			children = (
+				C4174D6A2A801AB40013E829 /* Alert.swift */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4174D6B2A801AB40013E829 /* Alert.swift in Sources */,
 				C4212B3C2A6E091A009F9693 /* RegisterScreen.swift in Sources */,
 				C4212B252A6D3F12009F9693 /* LoginViewController.swift in Sources */,
 				C4212B372A6D42A9009F9693 /* LoginScreen.swift in Sources */,
