@@ -7,8 +7,19 @@
 
 import UIKit
 
+protocol LoginScreenProtocol: AnyObject {
+    func actionLogin()
+    func actionRegister()
+}
+
 class LoginScreen: UIView {
 
+    private weak var delegate: LoginScreenProtocol?
+    
+    public func setDelegate(delegate: LoginScreenProtocol) {
+        self.delegate = delegate
+    }
+    
     lazy var gmLogoImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -59,7 +70,6 @@ class LoginScreen: UIView {
         textField.spellCheckingType = .no
         textField.keyboardType = .default
         textField.backgroundColor = .white
-        
         return textField
     }()
     
@@ -71,12 +81,26 @@ class LoginScreen: UIView {
         button.backgroundColor = UIColor.darkGray
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
-        button.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
         return button
     }()
     
-    @objc private func tappedButton() {
-        
+    @objc private func tappedLoginButton() {
+        delegate?.actionLogin()
+    }
+    
+    lazy var registerButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Não tem uma conta? Registre-se", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc private func tappedRegisterButton() {
+        delegate?.actionRegister()
     }
     
     override init(frame: CGRect) {
@@ -108,6 +132,7 @@ class LoginScreen: UIView {
         addSubview(passwordLabel)
         addSubview(passwordTextField)
         addSubview(EnterButton)
+        addSubview(registerButton)
     }
     
     required init?(coder: NSCoder) {
@@ -142,7 +167,11 @@ class LoginScreen: UIView {
             EnterButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 40),
             EnterButton.leadingAnchor.constraint(equalTo: emailLabel.leadingAnchor),
             EnterButton.trailingAnchor.constraint(equalTo: emailLabel.trailingAnchor),
-            EnterButton.heightAnchor.constraint(equalToConstant: 40)
+            EnterButton.heightAnchor.constraint(equalToConstant: 40),
+            
+            registerButton.topAnchor.constraint(equalTo: EnterButton.bottomAnchor, constant: 5),
+            registerButton.trailingAnchor.constraint(equalTo: emailLabel.trailingAnchor),
+            registerButton.widthAnchor.constraint(equalToConstant: 200)
         ])
     }
 }

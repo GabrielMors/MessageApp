@@ -18,9 +18,24 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configBackground()
+        screen?.setDelegate(delegate: self)
+    }
+
+    private func configBackground() {
         view.backgroundColor = .lightGray
     }
 
-
 }
 
+extension LoginViewController: LoginScreenProtocol {
+    func actionLogin() {
+        <#code#>
+    }
+    
+    func actionRegister() {
+        <#code#>
+    }
+    
+    
+}

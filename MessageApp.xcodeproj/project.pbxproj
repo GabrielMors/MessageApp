@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C41318E52A7FB6F000850769 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41318E42A7FB6F000850769 /* HomeViewController.swift */; };
+		C41318E72A7FB70200850769 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41318E62A7FB70200850769 /* HomeScreen.swift */; };
 		C4212B212A6D3F12009F9693 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4212B202A6D3F12009F9693 /* AppDelegate.swift */; };
 		C4212B232A6D3F12009F9693 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4212B222A6D3F12009F9693 /* SceneDelegate.swift */; };
 		C4212B252A6D3F12009F9693 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4212B242A6D3F12009F9693 /* LoginViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C41318E42A7FB6F000850769 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C41318E62A7FB70200850769 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		C4212B1D2A6D3F12009F9693 /* MessageApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4212B202A6D3F12009F9693 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4212B222A6D3F12009F9693 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C41318E32A7FB6D300850769 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C41318E62A7FB70200850769 /* HomeScreen.swift */,
+				C41318E42A7FB6F000850769 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		C4212B142A6D3F12009F9693 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +73,8 @@
 		C4212B1F2A6D3F12009F9693 /* MessageApp */ = {
 			isa = PBXGroup;
 			children = (
+				C4212B3F2A6E0AC3009F9693 /* Model */,
+				C41318E32A7FB6D300850769 /* Home */,
 				C4212B3A2A6E08CC009F9693 /* Register */,
 				C4212B352A6D4286009F9693 /* Login */,
 				C4212B342A6D41D6009F9693 /* Resources */,
@@ -95,6 +110,13 @@
 				C4212B3D2A6E0943009F9693 /* RegisterViewController.swift */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		C4212B3F2A6E0AC3009F9693 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,7 +193,9 @@
 				C4212B252A6D3F12009F9693 /* LoginViewController.swift in Sources */,
 				C4212B372A6D42A9009F9693 /* LoginScreen.swift in Sources */,
 				C4212B3E2A6E0943009F9693 /* RegisterViewController.swift in Sources */,
+				C41318E72A7FB70200850769 /* HomeScreen.swift in Sources */,
 				C4212B212A6D3F12009F9693 /* AppDelegate.swift in Sources */,
+				C41318E52A7FB6F000850769 /* HomeViewController.swift in Sources */,
 				C4212B232A6D3F12009F9693 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
