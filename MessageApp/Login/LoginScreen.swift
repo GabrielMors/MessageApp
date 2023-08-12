@@ -73,7 +73,7 @@ class LoginScreen: UIView {
         return textField
     }()
     
-    lazy var EnterButton: UIButton = {
+    lazy var loginButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Log in", for: .normal)
@@ -113,6 +113,11 @@ class LoginScreen: UIView {
         addBorder(to: passwordTextField)
     }
     
+    public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
+        emailTextField.delegate = delegate
+        passwordTextField.delegate = delegate
+    }
+    
     private func addLeftPadding(to textField: UITextField) {
         let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: textField.frame.height))
         textField.leftView = leftView
@@ -125,13 +130,42 @@ class LoginScreen: UIView {
         to.layer.cornerRadius = 15
     }
     
+    public func validationTextField() {
+        let email: String = emailTextField.text ?? ""
+        let password: String = passwordTextField.text ?? ""
+        
+        if !email.isEmpty && !password.isEmpty{
+            configButtonEnable(true)
+        } else {
+            configButtonEnable(false)
+        }
+    }
+    
+    private func configButtonEnable(_ enable: Bool) {
+        if enable {
+            loginButton.setTitleColor(.white, for: .normal)
+            loginButton.isEnabled = true
+        } else {
+            loginButton.setTitleColor(.lightGray, for: .normal)
+            loginButton.isEnabled = false
+        }
+    }
+    
+    public func getEmail()-> String {
+        return emailTextField.text ?? ""
+    }
+    
+    public func getPassword()-> String {
+        return passwordTextField.text ?? ""
+    }
+    
     private func addElements() {
         addSubview(gmLogoImage)
         addSubview(emailLabel)
         addSubview(emailTextField)
         addSubview(passwordLabel)
         addSubview(passwordTextField)
-        addSubview(EnterButton)
+        addSubview(loginButton)
         addSubview(registerButton)
     }
     
@@ -164,12 +198,12 @@ class LoginScreen: UIView {
             passwordTextField.trailingAnchor.constraint(equalTo: emailLabel.trailingAnchor),
             passwordTextField.heightAnchor.constraint(equalToConstant: 40),
             
-            EnterButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 40),
-            EnterButton.leadingAnchor.constraint(equalTo: emailLabel.leadingAnchor),
-            EnterButton.trailingAnchor.constraint(equalTo: emailLabel.trailingAnchor),
-            EnterButton.heightAnchor.constraint(equalToConstant: 40),
+            loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 40),
+            loginButton.leadingAnchor.constraint(equalTo: emailLabel.leadingAnchor),
+            loginButton.trailingAnchor.constraint(equalTo: emailLabel.trailingAnchor),
+            loginButton.heightAnchor.constraint(equalToConstant: 40),
             
-            registerButton.topAnchor.constraint(equalTo: EnterButton.bottomAnchor, constant: 5),
+            registerButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 5),
             registerButton.trailingAnchor.constraint(equalTo: emailLabel.trailingAnchor),
             registerButton.widthAnchor.constraint(equalToConstant: 200)
         ])
