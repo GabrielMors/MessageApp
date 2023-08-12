@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3C49EC7748FB3F63A61F7C92 /* Pods_MessageApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 081E1C648ACF921775D270DE /* Pods_MessageApp.framework */; };
+		C407A7E32A87C63A00A5F7C6 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A7D92A87C63A00A5F7C6 /* CustomColor.swift */; };
+		C407A7E42A87C63A00A5F7C6 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A7DA2A87C63A00A5F7C6 /* UIButton+Extensions.swift */; };
+		C407A7E52A87C63A00A5F7C6 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A7DB2A87C63A00A5F7C6 /* UIView+Extensions.swift */; };
+		C407A7E62A87C63A00A5F7C6 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A7DC2A87C63A00A5F7C6 /* String+Extensions.swift */; };
+		C407A7E72A87C63A00A5F7C6 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C407A7DE2A87C63A00A5F7C6 /* Poppins-Medium.ttf */; };
+		C407A7E82A87C63A00A5F7C6 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C407A7DF2A87C63A00A5F7C6 /* Poppins-Bold.ttf */; };
+		C407A7E92A87C63A00A5F7C6 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C407A7E02A87C63A00A5F7C6 /* Poppins-SemiBold.ttf */; };
+		C407A7EA2A87C63A00A5F7C6 /* send.wav in Resources */ = {isa = PBXBuildFile; fileRef = C407A7E22A87C63A00A5F7C6 /* send.wav */; };
 		C41318E52A7FB6F000850769 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41318E42A7FB6F000850769 /* HomeViewController.swift */; };
 		C41318E72A7FB70200850769 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41318E62A7FB70200850769 /* HomeScreen.swift */; };
 		C4174D6B2A801AB40013E829 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4174D6A2A801AB40013E829 /* Alert.swift */; };
@@ -25,6 +33,14 @@
 /* Begin PBXFileReference section */
 		081E1C648ACF921775D270DE /* Pods_MessageApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessageApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B681200E35CDEC8DF4DFCECE /* Pods-MessageApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageApp.debug.xcconfig"; path = "Target Support Files/Pods-MessageApp/Pods-MessageApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C407A7D92A87C63A00A5F7C6 /* CustomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
+		C407A7DA2A87C63A00A5F7C6 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		C407A7DB2A87C63A00A5F7C6 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		C407A7DC2A87C63A00A5F7C6 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		C407A7DE2A87C63A00A5F7C6 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		C407A7DF2A87C63A00A5F7C6 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		C407A7E02A87C63A00A5F7C6 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		C407A7E22A87C63A00A5F7C6 /* send.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = send.wav; sourceTree = "<group>"; };
 		C41318E42A7FB6F000850769 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C41318E62A7FB70200850769 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		C4174D6A2A801AB40013E829 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
@@ -71,10 +87,83 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C41318E32A7FB6D300850769 /* Home */ = {
+		C407A7D72A87C63A00A5F7C6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C407A7D82A87C63A00A5F7C6 /* Extensions */,
+				C407A7DD2A87C63A00A5F7C6 /* Fonts */,
+				C407A7E12A87C63A00A5F7C6 /* Sound */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C407A7D82A87C63A00A5F7C6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C407A7D92A87C63A00A5F7C6 /* CustomColor.swift */,
+				C407A7DA2A87C63A00A5F7C6 /* UIButton+Extensions.swift */,
+				C407A7DB2A87C63A00A5F7C6 /* UIView+Extensions.swift */,
+				C407A7DC2A87C63A00A5F7C6 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C407A7DD2A87C63A00A5F7C6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C407A7DE2A87C63A00A5F7C6 /* Poppins-Medium.ttf */,
+				C407A7DF2A87C63A00A5F7C6 /* Poppins-Bold.ttf */,
+				C407A7E02A87C63A00A5F7C6 /* Poppins-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C407A7E12A87C63A00A5F7C6 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				C407A7E22A87C63A00A5F7C6 /* send.wav */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		C407A7EB2A87C64900A5F7C6 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				C41318E32A7FB6D300850769 /* Home */,
+				C4212B352A6D4286009F9693 /* Login */,
+				C4212B3A2A6E08CC009F9693 /* Register */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		C407A7EC2A87C6B700A5F7C6 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C4212B362A6D42A9009F9693 /* LoginScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		C407A7ED2A87C6C000A5F7C6 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C4212B3B2A6E091A009F9693 /* RegisterScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		C407A7EE2A87C6CF00A5F7C6 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
 				C41318E62A7FB70200850769 /* HomeScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		C41318E32A7FB6D300850769 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C407A7EE2A87C6CF00A5F7C6 /* Screen */,
 				C41318E42A7FB6F000850769 /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -111,9 +200,8 @@
 			children = (
 				C4212B3F2A6E0AC3009F9693 /* Model */,
 				C4174D692A801A5B0013E829 /* Alert */,
-				C41318E32A7FB6D300850769 /* Home */,
-				C4212B3A2A6E08CC009F9693 /* Register */,
-				C4212B352A6D4286009F9693 /* Login */,
+				C407A7D72A87C63A00A5F7C6 /* Utils */,
+				C407A7EB2A87C64900A5F7C6 /* Features */,
 				C4212B342A6D41D6009F9693 /* Resources */,
 				C4174D6C2A80453E0013E829 /* GoogleService-Info.plist */,
 				C4212B2E2A6D3F14009F9693 /* Info.plist */,
@@ -135,7 +223,7 @@
 		C4212B352A6D4286009F9693 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				C4212B362A6D42A9009F9693 /* LoginScreen.swift */,
+				C407A7EC2A87C6B700A5F7C6 /* Screen */,
 				C4212B242A6D3F12009F9693 /* LoginViewController.swift */,
 			);
 			path = Login;
@@ -144,7 +232,7 @@
 		C4212B3A2A6E08CC009F9693 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				C4212B3B2A6E091A009F9693 /* RegisterScreen.swift */,
+				C407A7ED2A87C6C000A5F7C6 /* Screen */,
 				C4212B3D2A6E0943009F9693 /* RegisterViewController.swift */,
 			);
 			path = Register;
@@ -218,7 +306,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4212B2D2A6D3F14009F9693 /* LaunchScreen.storyboard in Resources */,
+				C407A7E72A87C63A00A5F7C6 /* Poppins-Medium.ttf in Resources */,
+				C407A7E82A87C63A00A5F7C6 /* Poppins-Bold.ttf in Resources */,
+				C407A7E92A87C63A00A5F7C6 /* Poppins-SemiBold.ttf in Resources */,
 				C4212B2A2A6D3F14009F9693 /* Assets.xcassets in Resources */,
+				C407A7EA2A87C63A00A5F7C6 /* send.wav in Resources */,
 				C4174D6D2A80453F0013E829 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,13 +365,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4174D6B2A801AB40013E829 /* Alert.swift in Sources */,
+				C407A7E62A87C63A00A5F7C6 /* String+Extensions.swift in Sources */,
 				C4212B3C2A6E091A009F9693 /* RegisterScreen.swift in Sources */,
 				C4212B252A6D3F12009F9693 /* LoginViewController.swift in Sources */,
 				C4212B372A6D42A9009F9693 /* LoginScreen.swift in Sources */,
 				C4212B3E2A6E0943009F9693 /* RegisterViewController.swift in Sources */,
 				C41318E72A7FB70200850769 /* HomeScreen.swift in Sources */,
+				C407A7E52A87C63A00A5F7C6 /* UIView+Extensions.swift in Sources */,
 				C4212B212A6D3F12009F9693 /* AppDelegate.swift in Sources */,
 				C41318E52A7FB6F000850769 /* HomeViewController.swift in Sources */,
+				C407A7E32A87C63A00A5F7C6 /* CustomColor.swift in Sources */,
+				C407A7E42A87C63A00A5F7C6 /* UIButton+Extensions.swift in Sources */,
 				C4212B232A6D3F12009F9693 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

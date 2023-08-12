@@ -58,6 +58,7 @@ class RegisterScreen: UIView {
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(systemName: "message.badge.filled.fill")
         image.contentMode = .scaleAspectFit
+        image.tintColor = .darkGray
         return image
     }()
     
@@ -167,6 +168,10 @@ class RegisterScreen: UIView {
             registerButton.setTitleColor(.lightGray, for: .normal)
             registerButton.isEnabled = false
         }
+    }
+    
+    public func getName()-> String {
+        return nameTextField.text ?? ""
     }
     
     public func getEmail()-> String {
