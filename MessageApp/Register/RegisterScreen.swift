@@ -9,6 +9,7 @@ import UIKit
 
 protocol RegisterScreenProtocol: AnyObject {
     func actionRegisterButton()
+    func actionBackButton()
 }
 
 class RegisterScreen: UIView {
@@ -17,6 +18,28 @@ class RegisterScreen: UIView {
     
     public func setDelegate(delegate: RegisterScreenProtocol) {
         self.delegate = delegate
+    }
+    
+    lazy var backButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        if let systemImage = UIImage(named: "back") {
+            let renderer = UIGraphicsImageRenderer(size: CGSize(width: 30, height: 30))
+            let resizedImage = renderer.image { _ in
+                systemImage.draw(in: CGRect(origin: .zero, size: CGSize(width: 30, height: 30)))
+            }
+            button.setImage(resizedImage, for: .normal)
+        }
+        
+        button.tintColor = .white
+        button.addTarget(self, action: #selector(tappedBackButton), for: .touchUpInside)
+        
+        return button
+    }()
+    
+    @objc private func tappedBackButton() {
+        delegate?.actionBackButton()
     }
     
     lazy var registerLabel: UILabel = {
@@ -28,6 +51,14 @@ class RegisterScreen: UIView {
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 18)
         return label
+    }()
+    
+    lazy var logoImageView: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.image = UIImage(systemName: "message.badge.filled.fill")
+        image.contentMode = .scaleAspectFit
+        return image
     }()
     
     lazy var nameTextField: UITextField = {
@@ -63,6 +94,7 @@ class RegisterScreen: UIView {
         textField.autocorrectionType = .no
         textField.spellCheckingType = .no
         textField.keyboardType = .default
+        textField.isSecureTextEntry = true
         return textField
     }()
     
@@ -75,6 +107,7 @@ class RegisterScreen: UIView {
         textField.autocorrectionType = .no
         textField.spellCheckingType = .no
         textField.keyboardType = .default
+        textField.isSecureTextEntry = true
         return textField
     }()
     
@@ -86,12 +119,19 @@ class RegisterScreen: UIView {
         button.backgroundColor = UIColor.darkGray
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
-        button.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
         return button
     }()
     
-    @objc private func tappedButton() {
+    @objc private func tappedRegisterButton() {
         delegate?.actionRegisterButton()
+    }
+    
+    public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
+        nameTextField.delegate = delegate
+        emailTextField.delegate = delegate
+        passwordTextField.delegate = delegate
+        confirmPasswordTextField.delegate = delegate
     }
     
     private func addLeftPadding(to textField: UITextField) {
@@ -106,8 +146,41 @@ class RegisterScreen: UIView {
         to.layer.cornerRadius = 15
     }
     
+    public func validationTextField() {
+        let name: String = nameTextField.text ?? ""
+        let email: String = emailTextField.text ?? ""
+        let password: String = passwordTextField.text ?? ""
+        let confirmPassword: String = confirmPasswordTextField.text ?? ""
+        
+        if !name.isEmpty && !email.isEmpty && !password.isEmpty && !confirmPassword.isEmpty {
+            configButtonEnable(true)
+        } else {
+            configButtonEnable(false)
+        }
+    }
+    
+    private func configButtonEnable(_ enable: Bool) {
+        if enable {
+            registerButton.setTitleColor(.white, for: .normal)
+            registerButton.isEnabled = true
+        } else {
+            registerButton.setTitleColor(.lightGray, for: .normal)
+            registerButton.isEnabled = false
+        }
+    }
+    
+    public func getEmail()-> String {
+        return emailTextField.text ?? ""
+    }
+    
+    public func getPassword()-> String {
+        return passwordTextField.text ?? ""
+    }
+    
     private func addElements() {
+        self.addSubview(self.backButton)
         self.addSubview(self.registerLabel)
+        self.addSubview(self.logoImageView)
         self.addSubview(self.nameTextField)
         self.addSubview(self.emailTextField)
         self.addSubview(self.passwordTextField)
@@ -127,6 +200,7 @@ class RegisterScreen: UIView {
         addBorder(to: emailTextField)
         addBorder(to: passwordTextField)
         addBorder(to: confirmPasswordTextField)
+        configButtonEnable(false)
     }
     
     required init?(coder: NSCoder) {
@@ -135,10 +209,20 @@ class RegisterScreen: UIView {
     
     private func configConstraints() {
         NSLayoutConstraint.activate([
+            backButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 15),
+            backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            backButton.heightAnchor.constraint(equalToConstant: 40),
+            backButton.widthAnchor.constraint(equalToConstant: 40),
+            
             registerLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 30),
             registerLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             
-            nameTextField.topAnchor.constraint(equalTo: registerLabel.bottomAnchor, constant: 20),
+            logoImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            logoImageView.topAnchor.constraint(equalTo: registerLabel.bottomAnchor, constant: 20),
+            logoImageView.heightAnchor.constraint(equalToConstant: 120),
+            logoImageView.widthAnchor.constraint(equalToConstant: 120),
+            
+            nameTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 20),
             nameTextField.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
             nameTextField.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
             nameTextField.heightAnchor.constraint(equalToConstant: 40),

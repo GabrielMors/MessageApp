@@ -13,14 +13,14 @@ protocol LoginScreenProtocol: AnyObject {
 }
 
 class LoginScreen: UIView {
-
+    
     private weak var delegate: LoginScreenProtocol?
     
     public func setDelegate(delegate: LoginScreenProtocol) {
         self.delegate = delegate
     }
     
-    lazy var gmLogoImage: UIImageView = {
+    lazy var logoImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(systemName: "message.badge.filled.fill")
@@ -111,6 +111,7 @@ class LoginScreen: UIView {
         addLeftPadding(to: passwordTextField)
         addBorder(to: emailTextField)
         addBorder(to: passwordTextField)
+        configButtonEnable(false)
     }
     
     public func configTextFieldDelegate(delegate: UITextFieldDelegate) {
@@ -160,7 +161,7 @@ class LoginScreen: UIView {
     }
     
     private func addElements() {
-        addSubview(gmLogoImage)
+        addSubview(logoImageView)
         addSubview(emailLabel)
         addSubview(emailTextField)
         addSubview(passwordLabel)
@@ -175,15 +176,15 @@ class LoginScreen: UIView {
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            gmLogoImage.centerXAnchor.constraint(equalTo: centerXAnchor),
-            gmLogoImage.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
-            gmLogoImage.heightAnchor.constraint(equalToConstant: 120),
-            gmLogoImage.widthAnchor.constraint(equalToConstant: 120),
+            logoImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            logoImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+            logoImageView.heightAnchor.constraint(equalToConstant: 120),
+            logoImageView.widthAnchor.constraint(equalToConstant: 120),
             
-            emailLabel.topAnchor.constraint(equalTo: gmLogoImage.bottomAnchor, constant: 40),
+            emailLabel.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 40),
             emailLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             emailLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-
+            
             emailTextField.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 2),
             emailTextField.leadingAnchor.constraint(equalTo: emailLabel.leadingAnchor),
             emailTextField.trailingAnchor.constraint(equalTo: emailLabel.trailingAnchor),

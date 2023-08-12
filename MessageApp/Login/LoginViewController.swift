@@ -14,6 +14,10 @@ class LoginViewController: UIViewController {
     var auth: Auth?
     var alert: Alert?
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     override func loadView() {
         screen = LoginScreen()
         view = screen
@@ -22,9 +26,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configBackground()
-        auth = Auth.auth()
-        screen?.setDelegate(delegate: self)
         screen?.configTextFieldDelegate(delegate: self)
+        screen?.setDelegate(delegate: self)
+        auth = Auth.auth()
+        alert = Alert(controller: self)
     }
 
     private func configBackground() {
@@ -51,6 +56,7 @@ extension LoginViewController: LoginScreenProtocol {
                 }
             }
         })
+        
     }
     
     func actionRegister() {
