@@ -66,13 +66,8 @@ class NavigationView: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "Search"), for: .normal)
-        button.addTarget(self, action: #selector(tappedSearchButton), for: .touchUpInside)
         return button
     }()
-    
-    @objc private func tappedSearchButton() {
-        
-    }
     
     lazy var stackView: UIStackView = {
         let stack = UIStackView()
@@ -86,7 +81,7 @@ class NavigationView: UIView {
     lazy var conversationButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(named: "message")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        button.setImage(UIImage(systemName: "message")?.withRenderingMode(.alwaysTemplate), for: .normal)
         button.tintColor = .systemPink
         button.addTarget(self, action: #selector(tappedConversationButton), for: .touchUpInside)
         return button
@@ -115,7 +110,8 @@ class NavigationView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubViews()
+        addElementes()
+        configStackView()
         configConstraints()
     }
     
@@ -123,15 +119,18 @@ class NavigationView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func addSubViews() {
+    private func configStackView(){
+        stackView.addArrangedSubview(conversationButton)
+        stackView.addArrangedSubview(contactButton)
+    }
+    
+    private func addElementes() {
         addSubview(navBackgroundView)
         navBackgroundView.addSubview(navigationBar)
         navigationBar.addSubview(searchBar)
         navigationBar.addSubview(stackView)
         searchBar.addSubview(searchLabel)
         searchBar.addSubview(searchButton)
-        stackView.addArrangedSubview(conversationButton)
-        stackView.addArrangedSubview(contactButton)
     }
     
     private func configConstraints() {

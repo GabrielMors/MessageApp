@@ -40,8 +40,6 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: LoginScreenProtocol {
     func actionLogin() {
-        let viewController = HomeViewController()
-        navigationController?.pushViewController(viewController, animated: true)
         
         guard let login = screen else {return}
 
@@ -52,7 +50,10 @@ extension LoginViewController: LoginScreenProtocol {
                 if usuario == nil {
                     self.alert?.showAlertInformation(title: "Atenção", message: "Tivemos um problema inesperado, tente novamente mais tarde")
                 } else {
-                    print("Parabéns, usuario logado com sucesso!!")
+                    let viewController = HomeViewController()
+                    let navigationVC = UINavigationController(rootViewController: viewController)
+                    navigationVC.modalPresentationStyle = .fullScreen
+                    self.present(navigationVC, animated: true, completion: nil)
                 }
             }
         })
