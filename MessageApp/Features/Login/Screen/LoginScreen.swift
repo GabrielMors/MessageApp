@@ -135,7 +135,7 @@ class LoginScreen: UIView {
         let email: String = emailTextField.text ?? ""
         let password: String = passwordTextField.text ?? ""
         
-        if !email.isEmpty && !password.isEmpty{
+        if !email.isEmpty && !password.isEmpty {
             configButtonEnable(true)
         } else {
             configButtonEnable(false)
