@@ -8,58 +8,59 @@
 import UIKit
 
 class HomeScreen: UIView {
-    
-    lazy var navView: NavigationView = {
+
+    lazy var navVIew : NavigationView = {
         let view = NavigationView()
-        view.backgroundColor = CustomColor.appLight
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = CustomColor.appLight
         return view
     }()
     
-    lazy var collectionView: UICollectionView = {
-        let collection = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout.init())
-        collection.showsVerticalScrollIndicator = false
-        collection.backgroundColor = .clear
-        collection.delaysContentTouches = false
+    lazy var collectionView : UICollectionView = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
         layout.scrollDirection = .vertical
-        collection.setCollectionViewLayout(layout, animated: false)
-        return collection
+        let cv = UICollectionView( frame: .zero, collectionViewLayout: layout )
+        cv.translatesAutoresizingMaskIntoConstraints = false
+        cv.showsVerticalScrollIndicator = false
+        cv.backgroundColor = .clear
+        cv.delaysContentTouches = false
+        cv.register(LastetMessageCVC.self, forCellWithReuseIdentifier: LastetMessageCVC.identifier)
+        cv.register(MessageDetailsCVC.self, forCellWithReuseIdentifier: MessageDetailsCVC.identifier)
+        return cv
     }()
     
-    public func delegateCollectionView(delegate: UICollectionViewDelegate, dataSource: UICollectionViewDataSource) {
-        collectionView.delegate = delegate
-        collectionView.dataSource = dataSource
-    }
-    
-    public func reloadCollection() {
-        self.collectionView.reloadData()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        addElementes()
+        configContraints()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        addSubView()
-        configConstraints()
+
+    public func configColletionView(datasource: UICollectionViewDataSource, delegate: UICollectionViewDelegate){
+        collectionView.dataSource = datasource
+        collectionView.delegate = delegate
     }
     
-    private func addSubView() {
-        navView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(navView)
+    public func reloadData(){
+        collectionView.reloadData()
+    }
+    private func addElementes(){
+        addSubview(navVIew)
         addSubview(collectionView)
     }
     
-    private func configConstraints() {
+    private func configContraints(){
         NSLayoutConstraint.activate([
-            navView.topAnchor.constraint(equalTo: self.topAnchor),
-            navView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            navView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            navView.heightAnchor.constraint(equalToConstant: 140),
+            navVIew.topAnchor.constraint(equalTo: self.topAnchor),
+            navVIew.trailingAnchor.constraint(equalTo: trailingAnchor),
+            navVIew.leadingAnchor.constraint(equalTo: leadingAnchor),
+            navVIew.heightAnchor.constraint(equalToConstant: 140),
             
-            collectionView.topAnchor.constraint(equalTo: navView.bottomAnchor),
+            collectionView.topAnchor.constraint(equalTo: navVIew.bottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
@@ -67,7 +68,4 @@ class HomeScreen: UIView {
             
         ])
     }
-    
-    
-    
 }

@@ -44,7 +44,7 @@ class LoginScreen: UIView {
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.font = UIFont.systemFont(ofSize: 18)
         textField.placeholder = "Digite seu email"
-        textField.autocorrectionType = .no
+        textField.autocapitalizationType = .none
         textField.spellCheckingType = .no
         textField.keyboardType = .default
         textField.backgroundColor = .white
@@ -66,7 +66,7 @@ class LoginScreen: UIView {
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.font = UIFont.systemFont(ofSize: 18)
         textField.placeholder = "Digite sua senha"
-        textField.autocorrectionType = .no
+        textField.autocapitalizationType = .none
         textField.spellCheckingType = .no
         textField.keyboardType = .default
         textField.backgroundColor = .white

@@ -81,6 +81,7 @@ class RegisterScreen: UIView {
         textField.placeholder = "Digite seu email"
         textField.backgroundColor = .white
         textField.autocorrectionType = .no
+        textField.autocapitalizationType = .none
         textField.spellCheckingType = .no
         textField.keyboardType = .emailAddress
         return textField
@@ -93,6 +94,7 @@ class RegisterScreen: UIView {
         textField.placeholder = "Digite sua senha"
         textField.backgroundColor = .white
         textField.autocorrectionType = .no
+        textField.autocapitalizationType = .none
         textField.spellCheckingType = .no
         textField.keyboardType = .default
         textField.isSecureTextEntry = true
@@ -106,6 +108,7 @@ class RegisterScreen: UIView {
         textField.placeholder = "Confirme sua senha"
         textField.backgroundColor = .white
         textField.autocorrectionType = .no
+        textField.autocapitalizationType = .none
         textField.spellCheckingType = .no
         textField.keyboardType = .default
         textField.isSecureTextEntry = true
