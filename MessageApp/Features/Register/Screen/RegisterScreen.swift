@@ -101,20 +101,6 @@ class RegisterScreen: UIView {
         return textField
     }()
     
-    lazy var confirmPasswordTextField: UITextField = {
-        let textField = UITextField()
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.font = UIFont.systemFont(ofSize: 18)
-        textField.placeholder = "Confirme sua senha"
-        textField.backgroundColor = .white
-        textField.autocorrectionType = .no
-        textField.autocapitalizationType = .none
-        textField.spellCheckingType = .no
-        textField.keyboardType = .default
-        textField.isSecureTextEntry = true
-        return textField
-    }()
-    
     lazy var registerButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -135,7 +121,6 @@ class RegisterScreen: UIView {
         nameTextField.delegate = delegate
         emailTextField.delegate = delegate
         passwordTextField.delegate = delegate
-        confirmPasswordTextField.delegate = delegate
     }
     
     private func addLeftPadding(to textField: UITextField) {
@@ -154,9 +139,8 @@ class RegisterScreen: UIView {
         let name: String = nameTextField.text ?? ""
         let email: String = emailTextField.text ?? ""
         let password: String = passwordTextField.text ?? ""
-        let confirmPassword: String = confirmPasswordTextField.text ?? ""
         
-        if !name.isEmpty && !email.isEmpty && !password.isEmpty && !confirmPassword.isEmpty {
+        if !name.isEmpty && !email.isEmpty && !password.isEmpty {
             configButtonEnable(true)
         } else {
             configButtonEnable(false)
@@ -192,7 +176,6 @@ class RegisterScreen: UIView {
         self.addSubview(self.nameTextField)
         self.addSubview(self.emailTextField)
         self.addSubview(self.passwordTextField)
-        self.addSubview(self.confirmPasswordTextField)
         self.addSubview(self.registerButton)
     }
     
@@ -203,11 +186,9 @@ class RegisterScreen: UIView {
         addLeftPadding(to: nameTextField)
         addLeftPadding(to: emailTextField)
         addLeftPadding(to: passwordTextField)
-        addLeftPadding(to: confirmPasswordTextField)
         addBorder(to: nameTextField)
         addBorder(to: emailTextField)
         addBorder(to: passwordTextField)
-        addBorder(to: confirmPasswordTextField)
         configButtonEnable(false)
     }
     
@@ -245,13 +226,8 @@ class RegisterScreen: UIView {
             passwordTextField.trailingAnchor.constraint(equalTo: nameTextField.trailingAnchor),
             passwordTextField.heightAnchor.constraint(equalTo: nameTextField.heightAnchor),
             
-            confirmPasswordTextField.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
-            confirmPasswordTextField.leadingAnchor.constraint(equalTo: nameTextField.leadingAnchor),
-            confirmPasswordTextField.trailingAnchor.constraint(equalTo: nameTextField.trailingAnchor),
-            confirmPasswordTextField.heightAnchor.constraint(equalTo: nameTextField.heightAnchor),
-            
             registerButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            registerButton.topAnchor.constraint(equalTo: confirmPasswordTextField.bottomAnchor, constant: 40),
+            registerButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 40),
             registerButton.heightAnchor.constraint(equalToConstant: 40),
             registerButton.widthAnchor.constraint(equalToConstant: 100)
         ])

@@ -37,7 +37,7 @@ class ContactController {
                     return
                 }else {
                     if let snapShotResult = snapShotResult{
-                        for documents in snapShotResult.documents{
+                        for documents in snapShotResult.documents {
                             let dados = documents.data()
                             self.setContactData(userData: dados, UserId: idUser)
                             self.delegate?.sucessContact()

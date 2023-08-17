@@ -9,8 +9,8 @@ import UIKit
 
 class ChatNavView: UIView {
 
-    var controller : ChatVC? {
-        didSet{
+    var controller: ChatVC? {
+        didSet {
             self.backButton.addTarget(controller, action: #selector(controller?.tappedBackButton), for: .touchUpInside)
         }
     }
@@ -63,7 +63,7 @@ class ChatNavView: UIView {
     lazy var backButton : UIButton = {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
+        btn.setImage(UIImage(named: "back"), for: .normal)
         return btn
     }()
     
@@ -87,7 +87,6 @@ class ChatNavView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
      
-    
     private func addElementes(){
         addSubview(navBackGroundView)
         navBackGroundView.addSubview(navBar)

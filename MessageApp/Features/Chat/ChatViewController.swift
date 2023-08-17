@@ -49,14 +49,14 @@ class ChatVC: UIViewController {
     
     private func saveMessage(DestinyID: String, SenderID: String, message : Dictionary<String,Any>){
         self.db.collection("message").document(DestinyID).collection(SenderID).addDocument(data: message)
-        
+        self.Screen?.inputMessageTextField.text = ""
     }
     
     private func saveConversation(SenderID: String, DestinyID: String, conversation: [String :Any]) {
         self.db.collection("conversation").document(SenderID).collection("LastConversations").document(DestinyID).setData(conversation)
     }
     
-    func addListenerRequestMessage(){
+    func addListenerRequestMessage() {
         if let DestinyID = self.contact?.id{
             self.messageListener = db.collection("message").document(self.currentUserID ?? "").collection(DestinyID).order(by: "data", descending: true).addSnapshotListener({ querySnapShot, error in
                 self.messageList.removeAll()
@@ -138,7 +138,7 @@ extension ChatVC : UITableViewDelegate, UITableViewDataSource {
         let data = self.messageList[indice]
         let destinyID = data.idUser ?? ""
 
-        if self.currentUserID != destinyID{
+        if self.currentUserID != destinyID {
             let cell = tableView.dequeueReusableCell(withIdentifier: IncomingTextMessageTVC.identifier, for: indexPath) as? IncomingTextMessageTVC
             cell?.transform = CGAffineTransform(scaleX: 1, y: -1)
             cell?.selectionStyle = .none

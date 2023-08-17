@@ -14,8 +14,8 @@ protocol ChatScreenProtocol: AnyObject {
 
 class ChatScreen: UIView {
     
-    private weak var delegate :ChatScreenProtocol?
-    private var bottonConstraints:NSLayoutConstraint?
+    private weak var delegate: ChatScreenProtocol?
+    private var bottonConstraints: NSLayoutConstraint?
     private var player: AVAudioPlayer?
 
     public func delegate(delegate :ChatScreenProtocol?){
@@ -29,16 +29,16 @@ class ChatScreen: UIView {
     }()
     
     lazy var tableView : UITableView = {
-        let tv = UITableView()
-        tv.translatesAutoresizingMaskIntoConstraints = false
+        let tableview = UITableView()
+        tableview.translatesAutoresizingMaskIntoConstraints = false
         //MARK: REGISTER MISSING
-        tv.register(OutgoingTextMessageTVC.self, forCellReuseIdentifier: OutgoingTextMessageTVC.identifier)
-        tv.register(IncomingTextMessageTVC.self, forCellReuseIdentifier: IncomingTextMessageTVC.identifier)
-        tv.backgroundColor = .none
-        tv.transform = CGAffineTransform(scaleX: 1, y: -1)
-        tv.separatorStyle = .none
-        tv.tableFooterView = UIView()
-        return tv
+        tableview.register(IncomingTextMessageTVC.self, forCellReuseIdentifier: IncomingTextMessageTVC.identifier)
+        tableview.register(OutgoingTextMessageTVC.self, forCellReuseIdentifier: OutgoingTextMessageTVC.identifier)
+        tableview.backgroundColor = .none
+        tableview.transform = CGAffineTransform(scaleX: 1, y: -1)
+        tableview.separatorStyle = .none
+        tableview.tableFooterView = UIView()
+        return tableview
     }()
     
     public func configTableViewDelegate(datasource: UITableViewDataSource, delegate: UITableViewDelegate){
@@ -46,7 +46,7 @@ class ChatScreen: UIView {
         tableView.delegate = delegate
     }
     
-    public func reloadTableView(){
+    public func reloadTableView() {
         tableView.reloadData()
     }
     
@@ -60,17 +60,17 @@ class ChatScreen: UIView {
     }()
   
     lazy var sendButton: UIButton = {
-        let btn = UIButton()
-        btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.backgroundColor = CustomColor.appPink
-        btn.layer.cornerRadius = 22.5
-        btn.layer.shadowColor = CustomColor.appLight.cgColor
-        btn.layer.shadowRadius = 10
-        btn.titleLabel?.shadowOffset = CGSize(width: 0, height: 5)
-        btn.layer.shadowOpacity = 0.3
-        btn.addTarget(self, action: #selector(tappedSendButton), for: .touchUpInside)
-        btn.setImage(UIImage(named: "send"), for: .normal)
-        return btn
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = CustomColor.appPink
+        button.layer.cornerRadius = 22.5
+        button.layer.shadowColor = CustomColor.appLight.cgColor
+        button.layer.shadowRadius = 10
+        button.titleLabel?.shadowOffset = CGSize(width: 0, height: 5)
+        button.layer.shadowOpacity = 0.3
+        button.addTarget(self, action: #selector(tappedSendButton), for: .touchUpInside)
+        button.setImage(UIImage(named: "send"), for: .normal)
+        return button
     }()
      
     @objc func tappedSendButton(){
@@ -79,7 +79,8 @@ class ChatScreen: UIView {
         self.delegate?.tappedPushMessage()
         initialSendButtonConfig()
     }
-    private func initialSendButtonConfig(){
+    
+    private func initialSendButtonConfig() {
         self.sendButton.isEnabled = false
         self.inputMessageTextField.text = ""
         self.sendButton.layer.opacity = 0.4
@@ -96,13 +97,13 @@ class ChatScreen: UIView {
     }()
     
     lazy var inputMessageTextField: UITextField = {
-        let tf = UITextField()
-        tf.delegate = self
-        tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.placeholder = "Digite aqui"
-        tf.font = UIFont(name: CustomFont.poppinsSemiBold, size: 14)
-        tf.textColor = .darkGray
-        return tf
+        let textField = UITextField()
+        textField.delegate = self
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.placeholder = "Digite aqui"
+        textField.font = UIFont(name: CustomFont.poppinsSemiBold, size: 14)
+        textField.textColor = .darkGray
+        return textField
     }()
     
    
@@ -130,7 +131,7 @@ class ChatScreen: UIView {
         self.addConstraint(bottonConstraints ?? NSLayoutConstraint())
     }
     
-    private func animationKeyboard(){
+    private func animationKeyboard() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.handleKeyboardNotification(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.handleKeyboardNotification(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -195,7 +196,7 @@ class ChatScreen: UIView {
 
 extension ChatScreen:UITextFieldDelegate {
     
-    @objc func handleKeyboardNotification(notification: NSNotification){
+    @objc func handleKeyboardNotification(notification: NSNotification) {
         
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue
@@ -217,7 +218,7 @@ extension ChatScreen:UITextFieldDelegate {
     
     //MARK:- Animating
     @objc func textFieldDidChange(_ textField: UITextField) {
-        if self.inputMessageTextField.text == ""{
+        if self.inputMessageTextField.text == "" {
             UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                 self.sendButton.isEnabled = false
                 self.sendButton.layer.opacity = 0.4
