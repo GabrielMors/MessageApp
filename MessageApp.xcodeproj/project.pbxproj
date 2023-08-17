@@ -7,8 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C49EC7748FB3F63A61F7C92 /* Pods_MessageApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 081E1C648ACF921775D270DE /* Pods_MessageApp.framework */; };
+		C407A7E32A87C63A00A5F7C6 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A7D92A87C63A00A5F7C6 /* CustomColor.swift */; };
+		C407A7E42A87C63A00A5F7C6 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A7DA2A87C63A00A5F7C6 /* UIButton+Extensions.swift */; };
+		C407A7E52A87C63A00A5F7C6 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A7DB2A87C63A00A5F7C6 /* UIView+Extensions.swift */; };
+		C407A7E62A87C63A00A5F7C6 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A7DC2A87C63A00A5F7C6 /* String+Extensions.swift */; };
+		C407A7E72A87C63A00A5F7C6 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C407A7DE2A87C63A00A5F7C6 /* Poppins-Medium.ttf */; };
+		C407A7E82A87C63A00A5F7C6 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C407A7DF2A87C63A00A5F7C6 /* Poppins-Bold.ttf */; };
+		C407A7E92A87C63A00A5F7C6 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C407A7E02A87C63A00A5F7C6 /* Poppins-SemiBold.ttf */; };
+		C407A7EA2A87C63A00A5F7C6 /* send.wav in Resources */ = {isa = PBXBuildFile; fileRef = C407A7E22A87C63A00A5F7C6 /* send.wav */; };
+		C407A7F12A87D07600A5F7C6 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A7F02A87D07600A5F7C6 /* NavigationView.swift */; };
+		C407A7F32A8BF05900A5F7C6 /* MessageAllModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A7F22A8BF05900A5F7C6 /* MessageAllModel.swift */; };
+		C407A7F72A8BF19C00A5F7C6 /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A7F62A8BF19C00A5F7C6 /* ContactController.swift */; };
+		C407A7FC2A8BFBF800A5F7C6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A7FB2A8BFBF800A5F7C6 /* ChatViewController.swift */; };
+		C407A7FE2A8BFC0800A5F7C6 /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A7FD2A8BFC0800A5F7C6 /* ChatScreen.swift */; };
+		C407A8022A8BFC6C00A5F7C6 /* ChatNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A8012A8BFC6C00A5F7C6 /* ChatNavView.swift */; };
+		C407A8042A8BFD2900A5F7C6 /* CreateScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A8032A8BFD2900A5F7C6 /* CreateScreen.swift */; };
+		C407A8072A8BFD3E00A5F7C6 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A8062A8BFD3E00A5F7C6 /* CreateViewController.swift */; };
+		C407A80A2A8BFD6400A5F7C6 /* CreateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A8092A8BFD6400A5F7C6 /* CreateViewModel.swift */; };
+		C407A80D2A8BFE7400A5F7C6 /* OutgoingTextMessageTVCScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A80C2A8BFE7400A5F7C6 /* OutgoingTextMessageTVCScreen.swift */; };
+		C407A8102A8BFEA600A5F7C6 /* OutgoingTextMessageTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A80F2A8BFEA600A5F7C6 /* OutgoingTextMessageTVC.swift */; };
+		C407A8142A8BFEE900A5F7C6 /* IncomingTextMessageTVCScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A8132A8BFEE900A5F7C6 /* IncomingTextMessageTVCScreen.swift */; };
+		C407A8162A8BFF1000A5F7C6 /* IncomingTextMessageTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A8152A8BFF1000A5F7C6 /* IncomingTextMessageTVC.swift */; };
+		C407A81A2A8BFF6700A5F7C6 /* MessageDetailsCVCScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A8192A8BFF6700A5F7C6 /* MessageDetailsCVCScreen.swift */; };
+		C407A81C2A8BFF8000A5F7C6 /* MessageDetailsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A81B2A8BFF8000A5F7C6 /* MessageDetailsCVC.swift */; };
+		C407A8202A8BFFB100A5F7C6 /* LastetMessageCVCScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A81F2A8BFFB100A5F7C6 /* LastetMessageCVCScreen.swift */; };
+		C407A8222A8BFFD100A5F7C6 /* LastetMessageCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C407A8212A8BFFD100A5F7C6 /* LastetMessageCVC.swift */; };
 		C41318E52A7FB6F000850769 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41318E42A7FB6F000850769 /* HomeViewController.swift */; };
 		C41318E72A7FB70200850769 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41318E62A7FB70200850769 /* HomeScreen.swift */; };
+		C4174D6B2A801AB40013E829 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4174D6A2A801AB40013E829 /* Alert.swift */; };
+		C4174D6D2A80453F0013E829 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4174D6C2A80453E0013E829 /* GoogleService-Info.plist */; };
 		C4212B212A6D3F12009F9693 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4212B202A6D3F12009F9693 /* AppDelegate.swift */; };
 		C4212B232A6D3F12009F9693 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4212B222A6D3F12009F9693 /* SceneDelegate.swift */; };
 		C4212B252A6D3F12009F9693 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4212B242A6D3F12009F9693 /* LoginViewController.swift */; };
@@ -20,8 +48,37 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		081E1C648ACF921775D270DE /* Pods_MessageApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessageApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B681200E35CDEC8DF4DFCECE /* Pods-MessageApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageApp.debug.xcconfig"; path = "Target Support Files/Pods-MessageApp/Pods-MessageApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C407A7D92A87C63A00A5F7C6 /* CustomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
+		C407A7DA2A87C63A00A5F7C6 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		C407A7DB2A87C63A00A5F7C6 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		C407A7DC2A87C63A00A5F7C6 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		C407A7DE2A87C63A00A5F7C6 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		C407A7DF2A87C63A00A5F7C6 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		C407A7E02A87C63A00A5F7C6 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		C407A7E22A87C63A00A5F7C6 /* send.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = send.wav; sourceTree = "<group>"; };
+		C407A7F02A87D07600A5F7C6 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		C407A7F22A8BF05900A5F7C6 /* MessageAllModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageAllModel.swift; sourceTree = "<group>"; };
+		C407A7F62A8BF19C00A5F7C6 /* ContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
+		C407A7FB2A8BFBF800A5F7C6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		C407A7FD2A8BFC0800A5F7C6 /* ChatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
+		C407A8012A8BFC6C00A5F7C6 /* ChatNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNavView.swift; sourceTree = "<group>"; };
+		C407A8032A8BFD2900A5F7C6 /* CreateScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateScreen.swift; sourceTree = "<group>"; };
+		C407A8062A8BFD3E00A5F7C6 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		C407A8092A8BFD6400A5F7C6 /* CreateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewModel.swift; sourceTree = "<group>"; };
+		C407A80C2A8BFE7400A5F7C6 /* OutgoingTextMessageTVCScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingTextMessageTVCScreen.swift; sourceTree = "<group>"; };
+		C407A80F2A8BFEA600A5F7C6 /* OutgoingTextMessageTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingTextMessageTVC.swift; sourceTree = "<group>"; };
+		C407A8132A8BFEE900A5F7C6 /* IncomingTextMessageTVCScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingTextMessageTVCScreen.swift; sourceTree = "<group>"; };
+		C407A8152A8BFF1000A5F7C6 /* IncomingTextMessageTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingTextMessageTVC.swift; sourceTree = "<group>"; };
+		C407A8192A8BFF6700A5F7C6 /* MessageDetailsCVCScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailsCVCScreen.swift; sourceTree = "<group>"; };
+		C407A81B2A8BFF8000A5F7C6 /* MessageDetailsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailsCVC.swift; sourceTree = "<group>"; };
+		C407A81F2A8BFFB100A5F7C6 /* LastetMessageCVCScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastetMessageCVCScreen.swift; sourceTree = "<group>"; };
+		C407A8212A8BFFD100A5F7C6 /* LastetMessageCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastetMessageCVC.swift; sourceTree = "<group>"; };
 		C41318E42A7FB6F000850769 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C41318E62A7FB70200850769 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		C4174D6A2A801AB40013E829 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		C4174D6C2A80453E0013E829 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C4212B1D2A6D3F12009F9693 /* MessageApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4212B202A6D3F12009F9693 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4212B222A6D3F12009F9693 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +89,7 @@
 		C4212B362A6D42A9009F9693 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		C4212B3B2A6E091A009F9693 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		C4212B3D2A6E0943009F9693 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F65FAE0C9A36C4C7E9DB6BF9 /* Pods-MessageApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageApp.release.xcconfig"; path = "Target Support Files/Pods-MessageApp/Pods-MessageApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,19 +97,270 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C49EC7748FB3F63A61F7C92 /* Pods_MessageApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C41318E32A7FB6D300850769 /* Home */ = {
+		1951473F062781EE675B9620 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B681200E35CDEC8DF4DFCECE /* Pods-MessageApp.debug.xcconfig */,
+				F65FAE0C9A36C4C7E9DB6BF9 /* Pods-MessageApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		706D1DFC4E0366A1809C6F95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				081E1C648ACF921775D270DE /* Pods_MessageApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C407A7D72A87C63A00A5F7C6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C407A7D82A87C63A00A5F7C6 /* Extensions */,
+				C407A7DD2A87C63A00A5F7C6 /* Fonts */,
+				C407A7E12A87C63A00A5F7C6 /* Sound */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C407A7D82A87C63A00A5F7C6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C407A7D92A87C63A00A5F7C6 /* CustomColor.swift */,
+				C407A7DA2A87C63A00A5F7C6 /* UIButton+Extensions.swift */,
+				C407A7DB2A87C63A00A5F7C6 /* UIView+Extensions.swift */,
+				C407A7DC2A87C63A00A5F7C6 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C407A7DD2A87C63A00A5F7C6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C407A7DE2A87C63A00A5F7C6 /* Poppins-Medium.ttf */,
+				C407A7DF2A87C63A00A5F7C6 /* Poppins-Bold.ttf */,
+				C407A7E02A87C63A00A5F7C6 /* Poppins-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C407A7E12A87C63A00A5F7C6 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				C407A7E22A87C63A00A5F7C6 /* send.wav */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		C407A7EB2A87C64900A5F7C6 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				C407A7F92A8BF1F600A5F7C6 /* Chat */,
+				C407A7F82A8BF1ED00A5F7C6 /* Cell */,
+				C41318E32A7FB6D300850769 /* Home */,
+				C407A7FA2A8BF1FE00A5F7C6 /* Create */,
+				C4212B352A6D4286009F9693 /* Login */,
+				C4212B3A2A6E08CC009F9693 /* Register */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		C407A7EC2A87C6B700A5F7C6 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C4212B362A6D42A9009F9693 /* LoginScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		C407A7ED2A87C6C000A5F7C6 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C4212B3B2A6E091A009F9693 /* RegisterScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		C407A7EE2A87C6CF00A5F7C6 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
 				C41318E62A7FB70200850769 /* HomeScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		C407A7EF2A87D05F00A5F7C6 /* NavigationView */ = {
+			isa = PBXGroup;
+			children = (
+				C407A7F02A87D07600A5F7C6 /* NavigationView.swift */,
+			);
+			path = NavigationView;
+			sourceTree = "<group>";
+		};
+		C407A7F52A8BF18400A5F7C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C407A7F62A8BF19C00A5F7C6 /* ContactController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C407A7F82A8BF1ED00A5F7C6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C407A80B2A8BFE4C00A5F7C6 /* OutgoingTextMessage */,
+				C407A8112A8BFECA00A5F7C6 /* IncomingTextMessage */,
+				C407A8172A8BFF4600A5F7C6 /* MessageDetailsCVC */,
+				C407A81D2A8BFF9C00A5F7C6 /* LastetMessageCVC */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		C407A7F92A8BF1F600A5F7C6 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				C407A8002A8BFC5500A5F7C6 /* ChatNavView */,
+				C407A7FF2A8BFC0C00A5F7C6 /* Screen */,
+				C407A7FB2A8BFBF800A5F7C6 /* ChatViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		C407A7FA2A8BF1FE00A5F7C6 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				C407A8082A8BFD4900A5F7C6 /* ViewModel */,
+				C407A8052A8BFD2C00A5F7C6 /* Screen */,
+				C407A8062A8BFD3E00A5F7C6 /* CreateViewController.swift */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
+		C407A7FF2A8BFC0C00A5F7C6 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C407A7FD2A8BFC0800A5F7C6 /* ChatScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		C407A8002A8BFC5500A5F7C6 /* ChatNavView */ = {
+			isa = PBXGroup;
+			children = (
+				C407A8012A8BFC6C00A5F7C6 /* ChatNavView.swift */,
+			);
+			path = ChatNavView;
+			sourceTree = "<group>";
+		};
+		C407A8052A8BFD2C00A5F7C6 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C407A8032A8BFD2900A5F7C6 /* CreateScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		C407A8082A8BFD4900A5F7C6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C407A8092A8BFD6400A5F7C6 /* CreateViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C407A80B2A8BFE4C00A5F7C6 /* OutgoingTextMessage */ = {
+			isa = PBXGroup;
+			children = (
+				C407A80E2A8BFE9400A5F7C6 /* Screen */,
+				C407A80F2A8BFEA600A5F7C6 /* OutgoingTextMessageTVC.swift */,
+			);
+			path = OutgoingTextMessage;
+			sourceTree = "<group>";
+		};
+		C407A80E2A8BFE9400A5F7C6 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C407A80C2A8BFE7400A5F7C6 /* OutgoingTextMessageTVCScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		C407A8112A8BFECA00A5F7C6 /* IncomingTextMessage */ = {
+			isa = PBXGroup;
+			children = (
+				C407A8122A8BFED600A5F7C6 /* Screen */,
+				C407A8152A8BFF1000A5F7C6 /* IncomingTextMessageTVC.swift */,
+			);
+			path = IncomingTextMessage;
+			sourceTree = "<group>";
+		};
+		C407A8122A8BFED600A5F7C6 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C407A8132A8BFEE900A5F7C6 /* IncomingTextMessageTVCScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		C407A8172A8BFF4600A5F7C6 /* MessageDetailsCVC */ = {
+			isa = PBXGroup;
+			children = (
+				C407A8182A8BFF5C00A5F7C6 /* Screen */,
+				C407A81B2A8BFF8000A5F7C6 /* MessageDetailsCVC.swift */,
+			);
+			path = MessageDetailsCVC;
+			sourceTree = "<group>";
+		};
+		C407A8182A8BFF5C00A5F7C6 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C407A8192A8BFF6700A5F7C6 /* MessageDetailsCVCScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		C407A81D2A8BFF9C00A5F7C6 /* LastetMessageCVC */ = {
+			isa = PBXGroup;
+			children = (
+				C407A81E2A8BFFA700A5F7C6 /* Screen */,
+				C407A8212A8BFFD100A5F7C6 /* LastetMessageCVC.swift */,
+			);
+			path = LastetMessageCVC;
+			sourceTree = "<group>";
+		};
+		C407A81E2A8BFFA700A5F7C6 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C407A81F2A8BFFB100A5F7C6 /* LastetMessageCVCScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		C41318E32A7FB6D300850769 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C407A7F52A8BF18400A5F7C6 /* Controller */,
+				C407A7EF2A87D05F00A5F7C6 /* NavigationView */,
+				C407A7EE2A87C6CF00A5F7C6 /* Screen */,
 				C41318E42A7FB6F000850769 /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		C4174D692A801A5B0013E829 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				C4174D6A2A801AB40013E829 /* Alert.swift */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		C4212B142A6D3F12009F9693 = {
@@ -59,6 +368,8 @@
 			children = (
 				C4212B1F2A6D3F12009F9693 /* MessageApp */,
 				C4212B1E2A6D3F12009F9693 /* Products */,
+				1951473F062781EE675B9620 /* Pods */,
+				706D1DFC4E0366A1809C6F95 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,10 +385,11 @@
 			isa = PBXGroup;
 			children = (
 				C4212B3F2A6E0AC3009F9693 /* Model */,
-				C41318E32A7FB6D300850769 /* Home */,
-				C4212B3A2A6E08CC009F9693 /* Register */,
-				C4212B352A6D4286009F9693 /* Login */,
+				C4174D692A801A5B0013E829 /* Alert */,
+				C407A7D72A87C63A00A5F7C6 /* Utils */,
+				C407A7EB2A87C64900A5F7C6 /* Features */,
 				C4212B342A6D41D6009F9693 /* Resources */,
+				C4174D6C2A80453E0013E829 /* GoogleService-Info.plist */,
 				C4212B2E2A6D3F14009F9693 /* Info.plist */,
 			);
 			path = MessageApp;
@@ -97,7 +409,7 @@
 		C4212B352A6D4286009F9693 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				C4212B362A6D42A9009F9693 /* LoginScreen.swift */,
+				C407A7EC2A87C6B700A5F7C6 /* Screen */,
 				C4212B242A6D3F12009F9693 /* LoginViewController.swift */,
 			);
 			path = Login;
@@ -106,7 +418,7 @@
 		C4212B3A2A6E08CC009F9693 /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				C4212B3B2A6E091A009F9693 /* RegisterScreen.swift */,
+				C407A7ED2A87C6C000A5F7C6 /* Screen */,
 				C4212B3D2A6E0943009F9693 /* RegisterViewController.swift */,
 			);
 			path = Register;
@@ -115,6 +427,7 @@
 		C4212B3F2A6E0AC3009F9693 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C407A7F22A8BF05900A5F7C6 /* MessageAllModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -126,9 +439,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4212B312A6D3F14009F9693 /* Build configuration list for PBXNativeTarget "MessageApp" */;
 			buildPhases = (
+				EE83FD3FC99F241E91BF0846 /* [CP] Check Pods Manifest.lock */,
 				C4212B192A6D3F12009F9693 /* Sources */,
 				C4212B1A2A6D3F12009F9693 /* Frameworks */,
 				C4212B1B2A6D3F12009F9693 /* Resources */,
+				958E667381B4F048B0B1C40B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -178,24 +493,93 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4212B2D2A6D3F14009F9693 /* LaunchScreen.storyboard in Resources */,
+				C407A7E72A87C63A00A5F7C6 /* Poppins-Medium.ttf in Resources */,
+				C407A7E82A87C63A00A5F7C6 /* Poppins-Bold.ttf in Resources */,
+				C407A7E92A87C63A00A5F7C6 /* Poppins-SemiBold.ttf in Resources */,
 				C4212B2A2A6D3F14009F9693 /* Assets.xcassets in Resources */,
+				C407A7EA2A87C63A00A5F7C6 /* send.wav in Resources */,
+				C4174D6D2A80453F0013E829 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		958E667381B4F048B0B1C40B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MessageApp/Pods-MessageApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MessageApp/Pods-MessageApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MessageApp/Pods-MessageApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE83FD3FC99F241E91BF0846 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MessageApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C4212B192A6D3F12009F9693 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C407A7F12A87D07600A5F7C6 /* NavigationView.swift in Sources */,
+				C4174D6B2A801AB40013E829 /* Alert.swift in Sources */,
+				C407A8072A8BFD3E00A5F7C6 /* CreateViewController.swift in Sources */,
+				C407A7F72A8BF19C00A5F7C6 /* ContactController.swift in Sources */,
+				C407A7E62A87C63A00A5F7C6 /* String+Extensions.swift in Sources */,
 				C4212B3C2A6E091A009F9693 /* RegisterScreen.swift in Sources */,
+				C407A8162A8BFF1000A5F7C6 /* IncomingTextMessageTVC.swift in Sources */,
 				C4212B252A6D3F12009F9693 /* LoginViewController.swift in Sources */,
+				C407A7F32A8BF05900A5F7C6 /* MessageAllModel.swift in Sources */,
+				C407A7FE2A8BFC0800A5F7C6 /* ChatScreen.swift in Sources */,
+				C407A8022A8BFC6C00A5F7C6 /* ChatNavView.swift in Sources */,
+				C407A8102A8BFEA600A5F7C6 /* OutgoingTextMessageTVC.swift in Sources */,
 				C4212B372A6D42A9009F9693 /* LoginScreen.swift in Sources */,
+				C407A8142A8BFEE900A5F7C6 /* IncomingTextMessageTVCScreen.swift in Sources */,
 				C4212B3E2A6E0943009F9693 /* RegisterViewController.swift in Sources */,
 				C41318E72A7FB70200850769 /* HomeScreen.swift in Sources */,
+				C407A81A2A8BFF6700A5F7C6 /* MessageDetailsCVCScreen.swift in Sources */,
+				C407A7E52A87C63A00A5F7C6 /* UIView+Extensions.swift in Sources */,
+				C407A80A2A8BFD6400A5F7C6 /* CreateViewModel.swift in Sources */,
+				C407A8202A8BFFB100A5F7C6 /* LastetMessageCVCScreen.swift in Sources */,
+				C407A7FC2A8BFBF800A5F7C6 /* ChatViewController.swift in Sources */,
 				C4212B212A6D3F12009F9693 /* AppDelegate.swift in Sources */,
+				C407A81C2A8BFF8000A5F7C6 /* MessageDetailsCVC.swift in Sources */,
 				C41318E52A7FB6F000850769 /* HomeViewController.swift in Sources */,
+				C407A7E32A87C63A00A5F7C6 /* CustomColor.swift in Sources */,
+				C407A8222A8BFFD100A5F7C6 /* LastetMessageCVC.swift in Sources */,
+				C407A8042A8BFD2900A5F7C6 /* CreateScreen.swift in Sources */,
+				C407A80D2A8BFE7400A5F7C6 /* OutgoingTextMessageTVCScreen.swift in Sources */,
+				C407A7E42A87C63A00A5F7C6 /* UIButton+Extensions.swift in Sources */,
 				C4212B232A6D3F12009F9693 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +714,7 @@
 		};
 		C4212B322A6D3F14009F9693 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B681200E35CDEC8DF4DFCECE /* Pods-MessageApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -357,6 +742,7 @@
 		};
 		C4212B332A6D3F14009F9693 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F65FAE0C9A36C4C7E9DB6BF9 /* Pods-MessageApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
